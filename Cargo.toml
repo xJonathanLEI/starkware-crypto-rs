@@ -13,6 +13,39 @@ Rust FFI bindings for StarkWare's crypto-cpp library
 """
 keywords = ["ffi", "starkware", "cryptography"]
 build = "src/build.rs"
+include = [
+    "/Cargo.toml",
+    "/LICENSE-APACHE",
+    "/LICENSE-MIT",
+    "/README.md",
+    "/src/**",
+    "/lib/starkware-crypto/LICENSE",
+    "/lib/starkware-crypto/README.md",
+    "/lib/starkware-crypto/src/starkware/algebra/big_int.h",
+    "/lib/starkware-crypto/src/starkware/algebra/big_int.inl",
+    "/lib/starkware-crypto/src/starkware/algebra/elliptic_curve.h",
+    "/lib/starkware-crypto/src/starkware/algebra/elliptic_curve.inl",
+    "/lib/starkware-crypto/src/starkware/algebra/fraction_field_element.h",
+    "/lib/starkware-crypto/src/starkware/algebra/fraction_field_element.inl",
+    "/lib/starkware-crypto/src/starkware/algebra/prime_field_element.cc",
+    "/lib/starkware-crypto/src/starkware/algebra/prime_field_element.h",
+    "/lib/starkware-crypto/src/starkware/crypto/ecdsa.cc",
+    "/lib/starkware-crypto/src/starkware/crypto/ecdsa.h",
+    "/lib/starkware-crypto/src/starkware/crypto/elliptic_curve_constants.cc",
+    "/lib/starkware-crypto/src/starkware/crypto/elliptic_curve_constants.h",
+    "/lib/starkware-crypto/src/starkware/crypto/ffi/ecdsa.cc",
+    "/lib/starkware-crypto/src/starkware/crypto/ffi/ecdsa.h",
+    "/lib/starkware-crypto/src/starkware/crypto/ffi/pedersen_hash.cc",
+    "/lib/starkware-crypto/src/starkware/crypto/ffi/pedersen_hash.h",
+    "/lib/starkware-crypto/src/starkware/crypto/ffi/utils.cc",
+    "/lib/starkware-crypto/src/starkware/crypto/ffi/utils.h",
+    "/lib/starkware-crypto/src/starkware/crypto/pedersen_hash.cc",
+    "/lib/starkware-crypto/src/starkware/crypto/pedersen_hash.h",
+    "/lib/starkware-crypto/src/starkware/utils/error_handling.h",
+    "/lib/starkware-crypto/src/starkware/utils/math.h",
+    "/lib/starkware-crypto/src/starkware/utils/prng.h",
+    "/lib/starkware-crypto/src/third_party/gsl/gsl-lite.hpp"
+]
 
 [dependencies]
 num-traits = "0.2.14"
