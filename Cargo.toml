@@ -1,0 +1,21 @@
+[package]
+name = "starkware-crypto-sys"
+version = "0.1.0"
+authors = ["Jonathan LEI <me@xjonathan.dev>"]
+license = "MIT OR Apache-2.0"
+edition = "2021"
+readme = "README.md"
+documentation = "https://docs.rs/starkware-crypto-sys"
+repository = "https://github.com/xJonathanLEI/starkware-crypto-rs"
+homepage = "https://github.com/xJonathanLEI/starkware-crypto-rs"
+description = """
+Rust FFI bindings for StarkWare's crypto-cpp library
+"""
+keywords = ["ffi", "starkware", "cryptography"]
+build = "src/build.rs"
+
+[dev-dependencies]
+hex-literal = "0.3.4"
+
+[build-dependencies]
+cc = "1.0"
