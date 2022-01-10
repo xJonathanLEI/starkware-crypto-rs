@@ -14,7 +14,7 @@ To use the crate from [crates.io](https://crates.io/crates/starkware-crypto-sys)
 
 ```toml
 [dependencies]
-starkware-crypto-sys = "0.1.0"
+starkware-crypto-sys = "0.1"
 ```
 
 ## License
