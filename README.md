@@ -4,6 +4,20 @@
 
 **Rust FFI bindings for StarkWare's [crypto-cpp](https://github.com/starkware-libs/crypto-cpp) library**
 
+[![linting-badge](https://github.com/xJonathanLEI/starkware-crypto-rs/actions/workflows/lint.yaml/badge.svg?branch=master)](https://github.com/xJonathanLEI/starkware-crypto-rs/actions/workflows/lint.yaml)
+[![tests-badge](https://github.com/xJonathanLEI/starkware-crypto-rs/actions/workflows/test.yaml/badge.svg?branch=master)](https://github.com/xJonathanLEI/starkware-crypto-rs/actions/workflows/test.yaml)
+
+> _There seems to be a serious [performance issue](https://github.com/starkware-libs/crypto-cpp/issues/2) on `sign()`. It takes over 7 seconds on author's machine. You might want to consider alternative libraries for signing before it's fixed._
+
+## Adding starkware-crypto-rs to your project
+
+To use the crate from [crates.io](https://crates.io/crates/starkware-crypto-sys), add the following to your `Cargo.toml` file:
+
+```toml
+[dependencies]
+starkware-crypto-sys = "0.1.0"
+```
+
 ## License
 
 Licensed under either of
