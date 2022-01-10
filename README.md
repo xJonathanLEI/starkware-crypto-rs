@@ -17,6 +17,20 @@ To use the crate from [crates.io](https://crates.io/crates/starkware-crypto-sys)
 starkware-crypto-sys = "0.1"
 ```
 
+## Running benchmark
+
+To run benchmark:
+
+```sh
+$ cargo bench
+```
+
+On the author's machine, the results are:
+
+```log
+pedersen_hash           time:   [267.08 us 270.36 us 274.40 us]
+```
+
 ## License
 
 Licensed under either of
