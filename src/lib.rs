@@ -8,25 +8,25 @@ const CURVE_ORDER_LE: [u8; 32] = [
 ];
 
 extern "C" {
-    pub fn Hash(
+    fn Hash(
         in1: *const ::std::os::raw::c_char,
         in2: *const ::std::os::raw::c_char,
         out: *mut ::std::os::raw::c_char,
     ) -> ::std::os::raw::c_int;
 
-    pub fn GetPublicKey(
+    fn GetPublicKey(
         private_key: *const ::std::os::raw::c_char,
         out: *mut ::std::os::raw::c_char,
     ) -> ::std::os::raw::c_int;
 
-    pub fn Verify(
+    fn Verify(
         stark_key: *const ::std::os::raw::c_char,
         msg_hash: *const ::std::os::raw::c_char,
         r_bytes: *const ::std::os::raw::c_char,
         w_bytes: *const ::std::os::raw::c_char,
     ) -> ::std::os::raw::c_int;
 
-    pub fn Sign(
+    fn Sign(
         private_key: *const ::std::os::raw::c_char,
         message: *const ::std::os::raw::c_char,
         k: *const ::std::os::raw::c_char,
