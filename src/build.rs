@@ -18,5 +18,6 @@ fn main() {
         .flag("-Wextra")
         .flag("-fno-strict-aliasing")
         .flag("-fPIC")
+        .opt_level(3)
         .compile("starkware-crypto");
 }
