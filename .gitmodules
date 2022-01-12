@@ -1,3 +1,3 @@
 [submodule "lib/starkware-crypto"]
 	path = lib/starkware-crypto
-	url = https://github.com/starkware-libs/crypto-cpp
+	url = https://github.com/maxgillett/crypto-cpp

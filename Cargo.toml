@@ -36,6 +36,7 @@ include = [
     "/lib/starkware-crypto/src/starkware/crypto/elliptic_curve_constants.h",
     "/lib/starkware-crypto/src/starkware/crypto/ffi/ecdsa.cc",
     "/lib/starkware-crypto/src/starkware/crypto/ffi/ecdsa.h",
+    "/lib/starkware-crypto/src/starkware/crypto/ffi/endian.h",
     "/lib/starkware-crypto/src/starkware/crypto/ffi/pedersen_hash.cc",
     "/lib/starkware-crypto/src/starkware/crypto/ffi/pedersen_hash.h",
     "/lib/starkware-crypto/src/starkware/crypto/ffi/utils.cc",
