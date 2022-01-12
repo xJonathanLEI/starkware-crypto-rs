@@ -4,16 +4,14 @@ on:
       - master
   pull_request:
 
-name: Tests
+name: Tests on UNIX
 jobs:
   test:
     name: Rust tests
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        rust:
-          - stable
-          - nightly
+        os: [ubuntu-latest, macos-latest]
 
     steps:
       - name: Checkout source code
@@ -24,7 +22,7 @@ jobs:
       - name: Use stable toolchain
         uses: actions-rs/toolchain@v1
         with:
-          toolchain: ${{ matrix.rust }}
+          toolchain: stable
           profile: minimal
           override: true
 
