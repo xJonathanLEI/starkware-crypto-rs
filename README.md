@@ -8,7 +8,7 @@
 [![tests-badge](https://github.com/xJonathanLEI/starkware-crypto-rs/actions/workflows/test.yaml/badge.svg?branch=master)](https://github.com/xJonathanLEI/starkware-crypto-rs/actions/workflows/test.yaml)
 [![crates-badge](https://img.shields.io/crates/v/starkware-crypto-sys.svg)](https://crates.io/crates/starkware-crypto-sys)
 
-> _There's currently an issue on the official [crypto-cpp](https://github.com/starkware-libs/crypto-cpp) repository that prevents the library from compiling on macOS. We're using [Max Gillett's fork](https://github.com/maxgillett/crypto-cpp/tree/apple_build_support) until [his PR](https://github.com/starkware-libs/crypto-cpp/pull/4) is merged._
+> _Note that currently target `x86_64-pc-windows-msvc` is [not supported](https://github.com/xJonathanLEI/starkware-crypto-rs/issues/3). If you're building on Windows, you need to [use the GNU build of Rust](https://rust-lang.github.io/rustup/installation/windows.html)._
 
 ## Adding starkware-crypto-rs to your project
 
