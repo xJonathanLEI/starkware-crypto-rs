@@ -8,6 +8,8 @@
 [![tests-badge](https://github.com/xJonathanLEI/starkware-crypto-rs/actions/workflows/test.yaml/badge.svg?branch=master)](https://github.com/xJonathanLEI/starkware-crypto-rs/actions/workflows/test.yaml)
 [![crates-badge](https://img.shields.io/crates/v/starkware-crypto-sys.svg)](https://crates.io/crates/starkware-crypto-sys)
 
+> _There's currently an issue on the official [crypto-cpp](https://github.com/starkware-libs/crypto-cpp) repository that prevents the library from compiling on macOS. We're using [Max Gillett's fork](https://github.com/maxgillett/crypto-cpp/tree/apple_build_support) until [his PR](https://github.com/starkware-libs/crypto-cpp/pull/4) is merged._
+
 ## Adding starkware-crypto-rs to your project
 
 To use the crate from [crates.io](https://crates.io/crates/starkware-crypto-sys), add the following to your `Cargo.toml` file:
