@@ -1,3 +1,5 @@
+//! Rust FFI bindings for StarkWare's [crypto-cpp](https://github.com/starkware-libs/crypto-cpp) library.
+
 use num_bigint::BigInt;
 use num_integer::Integer;
 use num_traits::{One, Zero};
@@ -34,12 +36,21 @@ extern "C" {
     ) -> ::std::os::raw::c_int;
 }
 
+/// Stark ECDSA signature
 #[derive(Debug, PartialEq, Eq, Clone)]
 pub struct Signature {
+    /// The `r` value of a signature
     r: [u8; 32],
+    /// The `r` value of a signature
     s: [u8; 32],
 }
 
+/// Computes the Starkware version of the Pedersen hash of x and y. All inputs are little-endian.
+///
+/// ### Arguments
+///
+/// * `in1`: The x coordinate in **little endian** format
+/// * `in2`: The y coordinate in **little endian** format
 pub fn hash(in1: &[u8; 32], in2: &[u8; 32]) -> Result<[u8; 32], i32> {
     let mut buffer = [0u8; 1024];
 
@@ -60,6 +71,11 @@ pub fn hash(in1: &[u8; 32], in2: &[u8; 32]) -> Result<[u8; 32], i32> {
     }
 }
 
+/// Computes the public key given a Stark private key.
+///
+/// ### Arguments
+///
+/// * `private_key`: The private key in **little endian** format
 pub fn get_public_key(private_key: &[u8; 32]) -> Result<[u8; 32], i32> {
     let mut buffer = [0u8; 1024];
 
@@ -79,6 +95,14 @@ pub fn get_public_key(private_key: &[u8; 32]) -> Result<[u8; 32], i32> {
     }
 }
 
+/// Verifies if a signature is valid over a message hash given a Stark public key.
+///
+/// ### Arguments
+///
+/// * `stark_key`: The public key in **little endian** format
+/// * `msg_hash`: The message hash in **little endian** format
+/// * `r_bytes`: The `r` value of the signature in **little endian** format
+/// * `s_bytes`: The `s` value of the signature in **little endian** format
 pub fn verify(
     stark_key: &[u8; 32],
     msg_hash: &[u8; 32],
@@ -99,6 +123,14 @@ pub fn verify(
     res != 0
 }
 
+/// Computes ECDSA signature given a Stark private key and message hash.
+///
+/// ### Arguments
+///
+/// * `private_key`: The private key in **little endian** format
+/// * `message`: The message hash in **little endian** format
+/// * `k`: A random `k` value in **little endian** format. You **MUST NOT** use the same `k` on
+/// different signatures
 pub fn sign(private_key: &[u8; 32], message: &[u8; 32], k: &[u8; 32]) -> Result<Signature, i32> {
     let mut buffer = [0u8; 1024];
 
