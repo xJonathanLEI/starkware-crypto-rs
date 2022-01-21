@@ -61,5 +61,17 @@ criterion = "0.3.5"
 cc = { version = "1.0", features = ["parallel"] }
 
 [[bench]]
-name = "pedersen"
+name = "pedersen_hash"
+harness = false
+
+[[bench]]
+name = "ecdsa_get_public_key"
+harness = false
+
+[[bench]]
+name = "ecdsa_sign"
+harness = false
+
+[[bench]]
+name = "ecdsa_verify"
 harness = false
