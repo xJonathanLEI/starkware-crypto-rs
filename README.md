@@ -11,9 +11,21 @@
 
 > _Note that currently target `x86_64-pc-windows-msvc` is [not supported](https://github.com/xJonathanLEI/starkware-crypto-rs/issues/3). If you're building on Windows, you need to [use the GNU build of Rust](https://rust-lang.github.io/rustup/installation/windows.html)._
 
+## Using `starknet-crypto` instead
+
+Due to a few known issues with this library:
+
+- the underlying `crypto-cpp` library hasn't been updated for quite a while; and
+
+- the library does not build on Windows with MSVC; and
+
+- the underlying library is relatively slow in terms of performance;
+
+you're advised to use [starknet-crypto](https://github.com/xJonathanLEI/starknet-rs/tree/master/starknet-crypto) instead, which is pure-Rust implementation of the same low-level cryptography functions, with better performance and portability.
+
 ## Adding starkware-crypto-rs to your project
 
-To use the crate from [crates.io](https://crates.io/crates/starkware-crypto-sys), add the following to your `Cargo.toml` file:
+Still want to use `starkware-crypto-rs`? To use the crate from [crates.io](https://crates.io/crates/starkware-crypto-sys), add the following to your `Cargo.toml` file:
 
 ```toml
 [dependencies]
